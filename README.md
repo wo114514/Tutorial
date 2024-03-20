@@ -1,3 +1,3 @@
 # mdmbypass
-A way to Bypass / Delete MDM
+A way to Bypass MDM
 
