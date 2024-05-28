@@ -1,1 +1,118 @@
-a
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Half White, Half Gray Page</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      transform-origin: top left;
+    }
+
+    .left {
+      order: -1;
+      /* 将左侧元素移至最顶部 */
+      flex: 3;
+      background-color: white;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      /* 将元素从中间对齐改为顶部对齐 */
+      align-items: center;
+      font-size: 3rem;
+      font-weight: bold;
+      position: relative;
+      overflow-y: scroll;
+
+    }
+
+    .left h1 {
+      font-size: 4rem;
+      margin-top: 1rem;
+      order: -1;
+      /* 将 h1 标题移至最顶部 */
+    }
+
+    .left h2 {
+      font-size: 45px;
+      margin-top: 1rem;
+      line-height: 0.85;
+    }
+
+    .right {
+      flex: 4.5;
+      background-color: #9fa1a0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      font-weight: bold;
+      overflow-y: scroll;
+    }
+
+    .right h1 {
+      font-size: 50px;
+      margin-top: 1rem;
+      order: -1;
+      /* 将 h1 标题移至最顶部 */
+    }
+
+    .right h2 {
+      font-size: 35px;
+      margin-top: 1rem;
+    }
+
+    .right-container {
+      padding: 2rem;
+    }
+
+    .img {
+      width: 600px;
+      height: auto;
+    }
+  </style>
+</head>
+<script>
+  function playSound() {
+    var audio = new Audio('./img/SchoolSong_BGM.mp3');
+    audio.play();
+  }
+</script>
+
+<body>
+  <div class="left">
+    <h1>List</h1>
+    <h2 style="color: blue;"><a href="https://ccchwc.edu.hk">Click here</a></h2>
+    <h2 style="color: red;">*You may scroll up or down the pages*</h2>
+    <h2>1.Go to Rufus official website</h2>
+    <h2>(https://rufus.ie/en/)</h2>
+    <h2>2.Download Rufus</h2>
+    <h2>3.Start Rufus</h2>
+    <h2>4.Choose your usb</h2>
+    <h2>5.Choose your iso files</h2>
+    <h2>6.Change other options as shown</h2>
+    <h2>7.Click Start</h2>
+    <h2 style="color: red;">8.Notice the alert</h2>
+    <h2 style="color: red;">8.Agree the alert</h2>
+    <h2 style="color: blue;"><a href="./index.html">Click here</a></h2>
+  </div>
+  <div class="right">
+    <img src="logo.png" class="img" id="logo" onclick="playSound()" />
+    <h1>Details</h1>
+    <img src="./img/rufus.1.png" class="img" />
+    <img src="./img/rufus.2.png" class="img" />
+    <img src="./img/rufus.3.png" class="img" />
+    <img src="./img/rufus.4.png" class="img" />
+    <img src="./img/rufus.5.png" class="img" />
+  </div>
+</body>
+
+</html>
