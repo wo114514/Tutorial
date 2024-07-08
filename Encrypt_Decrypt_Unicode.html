@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Encryption and Decryption</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: none;
+      background-color: #4caf50;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .result-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+    }
+
+    .result-box button {
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function encrypt(message) {
+      var encryptedMessage = "";
+      for (var i = 0; i < message.length; i++) {
+        var charCode = message.charCodeAt(i);
+        var encryptedCharCode = charCode + 10;
+        encryptedMessage += String.fromCharCode(encryptedCharCode);
+      }
+      return encryptedMessage;
+    }
+
+    function decrypt(encryptedMessage) {
+      var decryptedMessage = "";
+      for (var i = 0; i < encryptedMessage.length; i++) {
+        var charCode = encryptedMessage.charCodeAt(i);
+        var decryptedCharCode = charCode - 10;
+        decryptedMessage += String.fromCharCode(decryptedCharCode);
+      }
+      return decryptedMessage;
+    }
+
+    function handleEncryption() {
+      var choice = document.getElementById("choice").value;
+      var message = document.getElementById("message").value;
+
+      var result = "";
+      if (choice === "1") {
+        result = encrypt(message);
+      } else if (choice === "2") {
+        result = decrypt(message);
+      } else {
+        result = "Invalid choice!";
+      }
+
+      var resultBox = document.getElementById("result-box");
+      resultBox.textContent = result;
+    }
+
+    function handleCopy() {
+      var resultBox = document.getElementById("result-box");
+      var range = document.createRange();
+      range.selectNode(resultBox);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+    }
+
+    function handleClear() {
+      var resultBox = document.getElementById("result-box");
+      resultBox.textContent = "";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Encryption and Decryption</h1>
+
+    <label for="choice">Choose:</label>
+    <select id="choice">
+      <option value="1">Encrypt</option>
+      <option value="2">Decrypt</option>
+    </select>
+
+    <label for="message">Message:</label>
+    <input type="text" id="message" placeholder="Enter your message">
+
+    <button onclick="handleEncryption()">Encrypt/Decrypt</button>
+
+    <div class="result-box" id="result-box">
+    </div>
+
+    <button onclick="handleCopy()">Copy Result</button>
+    <button onclick="handleClear()">Clear Result</button>
+  </div>
+</body>
+</html>
