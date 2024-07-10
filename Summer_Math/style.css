@@ -1,28 +1,55 @@
+/* 設定 HTML 和 Body 元素的高度和寬度 */
 html {
   height: 100%;
   width: 100%;
 }
-body{
-  font-size:9pt;font-family:arial,helvetica,sans-serif;color:#5C0D11;background:#E3E0D1;padding:2px;margin:0;text-align:center
+
+body {
+  font-size: 9pt;
+  font-family: arial, helvetica, sans-serif;
+  color: #5C0D11;
+  background: #E3E0D1;
+  padding: 2px;
+  margin: 0;
+  text-align: center;
 }
-a{color:#5C0D11}
-a:hover{color:#8F4701}
-p{padding:3px 1px;margin:0}
-img{border:0}
+
+/* 設定超連結的樣式 */
+a {
+  color: #5C0D11;
+}
+
+a:hover {
+  color: #8F4701;
+}
+
+/* 設定段落元素的樣式 */
+p {
+  padding: 3px 1px;
+  margin: 0;
+}
+
+/* 去除圖像的邊框 */
+img {
+  border: 0;
+}
+
+/* 設定導航欄的樣式 */
 #nb {
   display: flex;
   justify-content: center;
   align-items: center;
-  white-space: nowrap; 
-  width: 100%; 
-  padding: 10px 0; 
+  white-space: nowrap;
+  width: 100%;
+  padding: 10px 0;
   font-weight: bold;
 }
 
 #nb > div {
-  margin: 0 10px; 
+  margin: 0 10px;
 }
 
+/* 設定箭頭圖標的樣式 */
 .arrow-icon {
   margin-right: 5px;
   font-size: 0.8em;
