@@ -6,3 +6,4 @@ Useful Tutorial in daily life
 1.4 Update the homepage
 1.5 Optimize the homepage
 1.6 A new page for summer holiday homework
+1.7 Finish the Upper Part of the homework page
