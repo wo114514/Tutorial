@@ -49,7 +49,7 @@
     display: flex;
     align-items: flex-start;
     padding: 20px;
-    width: 825px; 
+    width: 815px; 
     height: 275px;
     margin: 0 auto;
   }
@@ -57,22 +57,9 @@
   .info_board img {
     border: 2.5px solid #5C0D11;
     height: 100%; 
-    width: 25%;
+    width: 24%;
   }
 
-
-  /*Smaller Screen */
-  @media (max-width: 768px) {
-    .info_board {
-      width: 90%; 
-    }
-  }
-  /*Larger Screen*/
-  @media (min-width: 768px) {
-    .info_board {
-      width: 825px; 
-    }
-  }  
   .info_content {
     flex: 1;
   }
@@ -96,7 +83,7 @@
   .info_content table{
     line-height: 2;
     text-align: left;
-    margin-left: 1%; 
+    margin-left: 2%; 
     color: #5C0D11;
     font-size: 15px;
     font-weight: bold; 
@@ -119,7 +106,7 @@
 .info_content .table3 {
   line-height: 2;
   text-align: left;
-  margin-left: 67.5%; 
+  margin-left: 70%; 
   margin-top: -36.5%;
   color: #5C0D11;
   font-size: 15px;
@@ -131,7 +118,18 @@
 .info_content table td::after {
     content: '';
     position: absolute;
-    margin-right: -10px;
+    margin-right: -1%;
+    top: 53%; 
+    transform: translateY(-50%);
+    right: 0;
+    height: 100%;
+    border-right: 1px solid #5C0D11; 
+}
+
+.info_content .table2 td::after {
+    content: '';
+    position: absolute;
+    margin-right: -7.5%;
     top: 53%; 
     transform: translateY(-50%);
     right: 0;
@@ -142,11 +140,101 @@
 .info_content .table3 td::after {
   content: '';
   position: absolute;
-  margin-right: -10px;
+  margin-right: -10%;
   top: 53%; 
   transform: translateY(-50%);
   right: 0;
   height: 100%;
   border-right: 1px solid transparent; 
 }
+
+/*Gallery Show*/
+.gallery {
+  display: flex;
+  flex-wrap: wrap; /* 允许图片换行 */
+  border: 2px solid #5C0D11;
+  padding: 20px;
+  width: 815px; /* 与info_board相同的宽度 */
+  margin: 10px auto; /* 调整间距 */
+  height: 1800px;
+}
+
+.gallery img {
+  border: 2.5px solid #5C0D11;
+  width: 23.1%; /* 每张图片的宽度 */
+  height: 275px;
+  margin: 0 10px 10px 0; /* 图片之间的间距和外边距 */
+}
+
+.gallery .img2 {
+  display: flex;
+  flex-wrap: wrap; /* 允许第二行图片换行 */
+}
+
+.gallery .img2 img{
+  border: 2.5px solid #5C0D11;
+  width: 23.1%; /* 每张图片的宽度 */
+  height: 275px;
+  transform: translateY(0%);
+  margin: 0 10px 10px 0; /* 图片之间的间距和外边距 */
+}
+
+.gallery .img3 {
+  display: flex;
+  flex-wrap: wrap; /* 允许第二行图片换行 */
+}
+
+.gallery .img3 img {
+  border: 2.5px solid #5C0D11;
+  width: 23.1%; /* 每张图片的宽度 */
+  height: 275px;
+
+  margin: 0 10px 10px 0; /* 图片之间的间距和外边距 */
+  }
+}
+
+/* 单独调整img4的高度 */
+.gallery .img4 img {
+  border: 2.5px solid #5C0D11;
+  width: 23.1%; /* 每张图片的宽度 */
+  height: 275px;
+  transform: translateY(0%);
+  margin: 0 10px 10px 0; /* 图片之间的间距和外边距 */
+}
+
+.gallery .img4 {
+  display: flex;
+  flex-wrap: wrap; /* 允许第二行图片换行 */
+}
+
+/* 单独调整img5的高度 */
+.gallery .img5 img {
+  border: 2.5px solid #5C0D11;
+  width: 23.1%; /* 每张图片的宽度 */
+  height: 275px;
+  transform: translateY(0%);
+  margin: 0 10px 10px 0; /* 图片之间的间距和外边距 */
+}
+
+.gallery .img5 {
+  display: flex;
+  flex-wrap: wrap; /* 允许第二行图片换行 */
+}
+
+/* 单独调整img5的高度 */
+.gallery .img56img {
+  border: 2.5px solid #5C0D11;
+  width: 23.1%; /* 每张图片的宽度 */
+  height: 275px;
+  transform: translateY(0%);
+  margin: 0 10px 10px 0; /* 图片之间的间距和外边距 */
+}
+
+.gallery .img6 {
+  display: flex;
+  flex-wrap: wrap; /* 允许第二行图片换行 */
+}
+
+
+
 
