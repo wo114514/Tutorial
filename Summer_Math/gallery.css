@@ -57,7 +57,6 @@ body {
 
 }
 .button {
-    top: -400px;
     width: 7.5%;
     height: 4%;
     cursor: pointer; /* 鼠标悬停时显示手型光标 */
