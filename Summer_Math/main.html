@@ -120,43 +120,58 @@
         </div>
     </div>
     <!--Info_board finished-->
+    <h3 style="font-size:25px; color:#9e0e16; line-height:0">Click the image to enlarge</h3>
     <h3 style="font-size:10px; color:#5C0D11; line-height:0.7">Showing 1 - 24 of 24 images</h3>
+    
     <div class="gallery">
-        <img src="img/0.jpg" alt="info_board img0">
-        <img src="img/1.jpg" alt="info_board img1">
-        <img src="img/2.jpg" alt="info_board img2">
-        <img src="img/3.jpg" alt="info_board img3">
+        <img id=img0 src="img/0.jpg" alt="info_board img0" onclick="GalleryShow('0')">
+        <img id=img1 src="img/1.jpg" alt="info_board img1" onclick="GalleryShow('1')">
+        <img id=img2 src="img/2.jpg" alt="info_board img2" onclick="GalleryShow('2')">
+        <img id=img3 src="img/3.jpg" alt="info_board img3" onclick="GalleryShow('3')">
         <div class="img2">
-            <img src="img/4.jpg" alt="info_board img4">
-            <img src="img/5.jpg" alt="info_board img5">
-            <img src="img/6.jpg" alt="info_board img6">
-            <img src="img/7.jpg" alt="info_board img7">
+            <img id=img4 src="img/4.jpg" alt="info_board img4" onclick="GalleryShow('4')">
+            <img id=img5 src="img/5.jpg" alt="info_board img5" onclick="GalleryShow('5')">
+            <img id=img6 src="img/6.jpg" alt="info_board img6" onclick="GalleryShow('6')">
+            <img id=img7 src="img/7.jpg" alt="info_board img7" onclick="GalleryShow('7')">
         </div>
         <div class="img3">
-            <img src="img/8.jpg" alt="info_board img8">
-            <img src="img/9.jpg" alt="info_board img9">
-            <img src="img/10.jpg" alt="info_board img10">
-            <img src="img/11.jpg" alt="info_board img11">
+            <img id=img8 src="img/8.jpg" alt="info_board img8" onclick="GalleryShow('8')">
+            <img id=img9 src="img/9.jpg" alt="info_board img9" onclick="GalleryShow('9')">
+            <img id=img10 src="img/10.jpg" alt="info_board img10" onclick="GalleryShow('10')">
+            <img id=img11 src="img/11.jpg" alt="info_board img11" onclick="GalleryShow('11')" >
         </div>
         <div class="img4">
-            <img src="img/12.jpg" alt="info_board img12">
-            <img src="img/13.jpg" alt="info_board img13">
-            <img src="img/14.jpg" alt="info_board img14">
-            <img src="img/15.jpg" alt="info_board img15">
+            <img id=img12 src="img/12.jpg" alt="info_board img12" onclick="GalleryShow('12')">
+            <img id=img13 src="img/13.jpg" alt="info_board img13" onclick="GalleryShow('13')">
+            <img id=img14 src="img/14.jpg" alt="info_board img14" onclick="GalleryShow('14')">
+            <img id=img15 src="img/15.jpg" alt="info_board img15" onclick="GalleryShow('15')">
         </div>
         <div class="img5">
-            <img src="img/16.jpg" alt="info_board img16">
-            <img src="img/17.jpg" alt="info_board img17">
-            <img src="img/18.jpg" alt="info_board img18">
-            <img src="img/19.jpg" alt="info_board img19">
+            <img id=img16 src="img/16.jpg" alt="info_board img16" onclick="GalleryShow('16')">
+            <img id=img17 src="img/17.jpg" alt="info_board img17" onclick="GalleryShow('17')">
+            <img id=img18 src="img/18.jpg" alt="info_board img18" onclick="GalleryShow('18')">
+            <img id=img19 src="img/19.jpg" alt="info_board img19" onclick="GalleryShow('19')">
         </div>
         <div class="img6">
-            <img src="img/20.jpg" alt="info_board img20">
-            <img src="img/21.jpg" alt="info_board img21">
-            <img src="img/22.jpg" alt="info_board img22">
-            <img src="img/23.jpg" alt="info_board img23">
+            <img id=img20 src="img/20.jpg" alt="info_board img20" onclick="GalleryShow('20')">
+            <img id=img21 src="img/21.jpg" alt="info_board img21" onclick="GalleryShow('21')">
+            <img id=img22 src="img/22.jpg" alt="info_board img22" onclick="GalleryShow('22')">
+            <img id=img23 src="img/23.jpg" alt="info_board img23" onclick="GalleryShow('23')">
         </div>
     </div>
+    <script>
+    function GalleryShow(imageId) {
+    if (imageId == '0'){
+        setTimeout(function() {
+        window.location.href = "https://ddb6e4f7-339c-4962-adf0-7db2b487c328-00-1chwbv817j8bn.sisko.replit.dev/gallery.html";
+        }, 200);
+    }
+    else{
+        setTimeout(function() {
+        window.location.href = "https://ddb6e4f7-339c-4962-adf0-7db2b487c328-00-1chwbv817j8bn.sisko.replit.dev/gallery.html?currentImageIndex=" + imageId;
+        }, 200);
+    }
+    }</script>
 </body>
 
 </html>
