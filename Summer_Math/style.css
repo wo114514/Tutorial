@@ -151,88 +151,80 @@
 /*Gallery Show*/
 .gallery {
   display: flex;
-  flex-wrap: wrap; /* 允许图片换行 */
+  flex-wrap: wrap; 
   border: 2px solid #5C0D11;
   padding: 20px;
-  width: 815px; /* 与info_board相同的宽度 */
-  margin: 10px auto; /* 调整间距 */
+  width: 815px; 
+  margin: 10px auto;
   height: 1800px;
 }
 
 .gallery img {
   border: 2.5px solid #5C0D11;
-  width: 23.1%; /* 每张图片的宽度 */
+  width: 23.1%; 
   height: 275px;
-  margin: 0 10px 10px 0; /* 图片之间的间距和外边距 */
+  margin: 0 10px 10px 0; 
 }
 
 .gallery .img2 {
   display: flex;
-  flex-wrap: wrap; /* 允许第二行图片换行 */
+  flex-wrap: wrap; 
 }
 
 .gallery .img2 img{
   border: 2.5px solid #5C0D11;
-  width: 23.1%; /* 每张图片的宽度 */
+  width: 23.1%; 
   height: 275px;
   transform: translateY(0%);
-  margin: 0 10px 10px 0; /* 图片之间的间距和外边距 */
+  margin: 0 10px 10px 0; 
 }
 
 .gallery .img3 {
   display: flex;
-  flex-wrap: wrap; /* 允许第二行图片换行 */
+  flex-wrap: wrap; 
 }
 
 .gallery .img3 img {
   border: 2.5px solid #5C0D11;
-  width: 23.1%; /* 每张图片的宽度 */
+  width: 23.1%; 
   height: 275px;
-
-  margin: 0 10px 10px 0; /* 图片之间的间距和外边距 */
+  margin: 0 10px 10px 0; 
   }
 }
 
-/* 单独调整img4的高度 */
 .gallery .img4 img {
   border: 2.5px solid #5C0D11;
-  width: 23.1%; /* 每张图片的宽度 */
+  width: 23.1%; 
   height: 275px;
-  transform: translateY(0%);
-  margin: 0 10px 10px 0; /* 图片之间的间距和外边距 */
+  margin: 0 10px 10px 0; 
 }
 
 .gallery .img4 {
   display: flex;
-  flex-wrap: wrap; /* 允许第二行图片换行 */
+  flex-wrap: wrap; 
 }
 
-/* 单独调整img5的高度 */
 .gallery .img5 img {
   border: 2.5px solid #5C0D11;
-  width: 23.1%; /* 每张图片的宽度 */
+  width: 23.1%; 
   height: 275px;
-  transform: translateY(0%);
-  margin: 0 10px 10px 0; /* 图片之间的间距和外边距 */
+  margin: 0 10px 10px 0;
 }
 
 .gallery .img5 {
   display: flex;
-  flex-wrap: wrap; /* 允许第二行图片换行 */
+  flex-wrap: wrap; 
 }
 
-/* 单独调整img5的高度 */
 .gallery .img56img {
   border: 2.5px solid #5C0D11;
-  width: 23.1%; /* 每张图片的宽度 */
+  width: 23.1%; 
   height: 275px;
-  transform: translateY(0%);
-  margin: 0 10px 10px 0; /* 图片之间的间距和外边距 */
-}
+  margin: 0 10px 10px 0; 
 
 .gallery .img6 {
   display: flex;
-  flex-wrap: wrap; /* 允许第二行图片换行 */
+  flex-wrap: wrap; 
 }
 
 
