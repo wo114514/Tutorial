@@ -43,7 +43,7 @@ body {
 .text-above, .text-below{
     align-self: flex-end;
     margin-top: auto;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 }
 
