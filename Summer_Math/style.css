@@ -164,31 +164,35 @@
   width: 23.1%; 
   height: 275px;
   margin: 0 10px 10px 0; 
+  transition: transform 0.3; /*New skill: 添加过渡效果 */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /*New Skill: 鼠标悬停时放大图片 */
 }
 
 .gallery .img2 {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .gallery .img2 img{
   border: 2.5px solid #5C0D11;
   width: 23.1%; 
   height: 275px;
-  transform: translateY(0%);
   margin: 0 10px 10px 0; 
 }
 
 .gallery .img3 {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .gallery .img3 img {
   border: 2.5px solid #5C0D11;
   width: 23.1%; 
   height: 275px;
-  margin: 0 10px 10px 0; 
+  margin: 0 10px 10px 0;
   }
 }
 
@@ -196,12 +200,12 @@
   border: 2.5px solid #5C0D11;
   width: 23.1%; 
   height: 275px;
-  margin: 0 10px 10px 0; 
+  margin: 0 10px 10px 0;
 }
 
 .gallery .img4 {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .gallery .img5 img {
@@ -221,6 +225,7 @@
   width: 23.1%; 
   height: 275px;
   margin: 0 10px 10px 0; 
+}
 
 .gallery .img6 {
   display: flex;
