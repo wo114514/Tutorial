@@ -6,7 +6,7 @@ const nextButton = document.getElementById('nextButton');
 const prevButton = document.getElementById('prevButton');
 const frontButton = document.getElementById('frontButton');
 const lastButton = document.getElementById('lastButton');
-var largeImage = document.querySelector('.image');
+const imageContainer = document.querySelector('.image');
 // 获取 URL 参数中的 currentImageIndex
 const urlParams = new URLSearchParams(window.location.search);
 const urlCurrentImageIndex = urlParams.get('currentImageIndex');
@@ -49,14 +49,34 @@ lastButton.addEventListener('click', function() {
     }, 250);
 });
 
+// 新增左右点击事件
+imageContainer.addEventListener('click', function(event) {
+    const boundingBox = imageContainer.getBoundingClientRect();
+    const clickX = event.clientX - boundingBox.left;
+    const containerWidth = boundingBox.width;
+
+    if (clickX < containerWidth / 2) {
+        // 点击了左侧
+        currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+    } else {
+        // 点击了右侧
+        currentImageIndex = (currentImageIndex + 1) % totalImages;
+    }
+
+    updateImage();
+    setTimeout(function() {
+        updatePage();
+    }, 250);
+});
+
 function updateImage() {
     const nextImageSrc = `img/${currentImageIndex}.jpg`;
-    largeImage.src = nextImageSrc; // 更新大图的 src
-    largeImage.alt = `Large Image ${currentImageIndex}`; // 更新大图的 alt 文本
+    imageContainer.src = nextImageSrc; // 更新大图的 src
+    imageContainer.alt = `Large Image ${currentImageIndex}`; // 更新大图的 alt 文本
 }
 
 function updatePage() {
-    if (currentImageIndex == 0){
+    if (currentImageIndex == 0) {
         document.getElementById('pageText').textContent = 'Cover Page';
     } else {
         currentPage = currentImageIndex;
